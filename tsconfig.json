@@ -1,0 +1,24 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+      "sourceMap": false,
+      "target": "es2019",
+      "module": "commonjs",
+      "removeComments": true,
+      "noImplicitAny": true,
+      "strictPropertyInitialization": true,
+      "strictNullChecks": true,
+      "esModuleInterop": true,    
+      "types": [
+        "node",      
+        "webdriverio/sync",
+        "@wdio/mocha-framework",
+        "expect-webdriverio",
+        "./types/wdio",
+        "wdio-image-comparison-service"
+      ],
+    },
+    "include": [
+        "./**/*.ts"
+      ]
+  }
