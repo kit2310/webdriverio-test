@@ -6,7 +6,6 @@ If it is being executed on docker containers let the service be 'docker' itself.
 Once the env has been setup run 'docker-compose up' on one terminal and 'npm run test' on another terminal.
 'npm run test' will execute all the tests under the tests/specs/ folder.
 'npm run report' will generate the report from allure-result folder.
-'npm run build' will execute tests and generate a report.
 
 The docker-compose.yml file will spin up two containers. A selenium hub container and selenium node chrome container. chrome container is scaled to 2.
 When the tests are executed with 'npm run test' it is run on these chrome containers.
