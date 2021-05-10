@@ -20,3 +20,14 @@ tests.
 
 If we have have any custom commands to add. We can add custom command to the before function hook. We will also need to declare the command in 'wdio.d.ts' file and
 include type in the 'tsconfig.json' file.
+
+Kubernetes can be setup with thw follwoing commands: 
+kubectl create -f deploy.yml
+kubectl create -f service.yml
+kubectl create -f repchome.yml
+kubectl create -f repff.yml
+
+fetch the ip address and port number with : kubectl describe service 
+
+once the services are running, we can try running our tests on it. Currently i m NOT able to run tests as the selenium hub is not able to interact with the
+chrome node.
