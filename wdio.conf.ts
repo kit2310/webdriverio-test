@@ -20,8 +20,8 @@ export const config: WebdriverIO.Config = {
     // according to your user and key information. However, if you are using a private Selenium
     // backend you should define the host address, port, and path here.
     //
-    // hostname: '192.168.64.2',
-    // port: 31795,
+    // hostname: 'localhost',
+    // port: 4444,
     // path: '/wd/hub',
     //
     // ==================
@@ -70,7 +70,7 @@ export const config: WebdriverIO.Config = {
     //
     capabilities: [
         {
-        maxInstances: 5,
+        maxInstances: 3,
         browserName: 'chrome',
         acceptInsecureCerts: true,
         // 'goog:chromeOptions': {
@@ -142,11 +142,11 @@ export const config: WebdriverIO.Config = {
     services: [  
     'docker',
     // 'chromedriver',
-    // ['selenium-standalone', {
-    //     args: {
-    //       seleniumArgs: ['-port', '4444']
-    //     },
-    // }],
+    ['selenium-standalone', {
+        args: {
+          seleniumArgs: ['-port', '4444']
+        },
+    }],
     [
     'image-comparison', {
         baselineFolder: join(process.cwd(), './lib/data/'),
@@ -195,7 +195,7 @@ export const config: WebdriverIO.Config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        timeout: 60000
+        timeout: 120000
     },
     //
     // =====
